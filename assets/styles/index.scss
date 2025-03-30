@@ -1,0 +1,9 @@
+@use "colors" as colors;
+@use "null";
+
+body {
+  background: colors.$white;
+  color: colors.$dark;
+  font-family: 'TTCommons', sans-serif;
+  line-height: normal;
+}

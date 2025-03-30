@@ -1,0 +1,12 @@
+{
+  "header": {
+    "nav": {
+      "works": "Works",
+      "about": "About"
+    },
+    "button": "Let’s work"
+  },
+  "blog_card": {
+    "more": "Read More"
+  }
+}
