@@ -1,6 +1,6 @@
 <template>
   <header class="header container-large">
-    <LogoQTM class="header__logo"  />
+    <NuxtLink to="/"><LogoQTM class="header__logo" /></NuxtLink>
     <div class="header__navigation">
       <nav class="header__menu">
         <ul class="header__menu-list">

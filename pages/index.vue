@@ -1,8 +1,7 @@
 <template>
   <div class="index-page">
     <UiTitle class="index-page__title">{{ t('pages.index.articles') }}</UiTitle>
-    <div v-if="isLoading" class="index-page__loading">Загрузка</div>
-
+    <div v-if="isLoading" class="index-page__loading">{{ t('common.loading') }}</div>
     <CardList
       v-else
       class="index-page__card-list"

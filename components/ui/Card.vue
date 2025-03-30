@@ -1,22 +1,25 @@
 <template>
-  <div class="card">
-    <div :class="['card__image', { 'card__image--error' : isBrokenImage }]">
-      <img :src="imageUrl" alt="" @error="handleImageError" />
-      <div class="card__image-plug">{{ t('card.no_photo') }}</div>
+  <NuxtLink :to="`/blog/${post.id}`">
+    <div class="card">
+      <div :class="['card__image', { 'card__image--error' : isBrokenImage }]">
+        <img :src="post.image" alt="" @error="handleImageError" />
+        <div class="card__image-plug">{{ t('post.no_photo') }}</div>
+      </div>
+      <div class="card__description">
+        {{ post.preview }}
+      </div>
+      <div class="card__button">{{ t('post.more') }}</div>
     </div>
-    <div class="card__description">
-      {{ description }}
-    </div>
-    <div class="card__button">{{ t('card.more') }}</div>
-  </div>
+  </NuxtLink>
 </template>
 
 <script lang="ts" setup>
+import type { BlogPost } from '~/types/blog';
+
 const { t } = useI18n();
 
 interface CardProps {
-  imageUrl?: string;
-  description?: string;
+  post: BlogPost;
 }
 
 defineProps<CardProps>();
@@ -33,7 +36,7 @@ const handleImageError = () => {
 
 .card {
   cursor: pointer;
-
+  color: colors.$dark;
   transition: transform 0.3s ease-in-out;
 
   &__image {

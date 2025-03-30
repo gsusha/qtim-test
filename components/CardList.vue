@@ -3,8 +3,7 @@
     <UiCard
       v-for="post in posts"
       :key="post.id"
-      :image-url="post.image"
-      :description="post.preview"
+      :post="post"
     />
   </div>
 </template>

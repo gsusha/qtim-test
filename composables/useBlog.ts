@@ -43,10 +43,12 @@ export function useBlog() {
     error.value = null;
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/posts/${id}`);
+      const response = await fetch(`${apiUrl}/posts/${id}`);
       if (!response.ok) throw new Error('Ошибка загрузки поста');
 
-      return await response.json();
+      const data: BlogPost = await response.json();
+
+      return data;
     } catch (err) {
       error.value = (err as Error).message;
       throw err;

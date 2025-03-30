@@ -11,8 +11,12 @@
       "articles": "Articles"
     }
   },
-  "card": {
+  "post": {
     "no_photo": "No Photo",
-    "more": "Read More"
+    "more": "Read More",
+    "about": "About"
+  },
+  "common": {
+    "loading": "Loading"
   }
 }
