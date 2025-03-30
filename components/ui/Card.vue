@@ -1,15 +1,13 @@
 <template>
-  <NuxtLink :to="`/blog/${post.id}`">
-    <div class="card">
-      <div :class="['card__image', { 'card__image--error' : isBrokenImage }]">
-        <img :src="post.image" alt="" @error="handleImageError" />
-        <div class="card__image-plug">{{ t('post.no_photo') }}</div>
-      </div>
-      <div class="card__description">
-        {{ post.preview }}
-      </div>
-      <div class="card__button">{{ t('post.more') }}</div>
+  <NuxtLink :to="`/blog/${post.id}`" class="card">
+    <div :class="['card__image', { 'card__image--error' : isBrokenImage }]">
+      <img :src="post.image" alt="" @error="handleImageError" />
+      <div class="card__image-plug">{{ t('post.no_photo') }}</div>
     </div>
+    <div class="card__description">
+      {{ post.preview }}
+    </div>
+    <div class="card__button">{{ t('post.more') }}</div>
   </NuxtLink>
 </template>
 
@@ -35,6 +33,7 @@ const handleImageError = () => {
 @use "assets/styles/colors" as colors;
 
 .card {
+  display: block;
   cursor: pointer;
   color: colors.$dark;
   transition: transform 0.3s ease-in-out;

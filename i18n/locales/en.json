@@ -6,6 +6,23 @@
     },
     "button": "Let’s work"
   },
+  "footer": {
+    "cta": {
+      "overline": "Is there a project?",
+      "title": "Let's work together"
+    },
+    "contacts": {
+      "for_questions": "For all questions",
+      "office_russia": "Office in Russia",
+      "office_dubai": "Office in Dubai",
+      "russia_address": "139 Ruben Station Lake Drew, NM 52678",
+      "dubai_address": "139 Ruben Station Lake Drew, NM 52678"
+    },
+    "buttons": {
+      "go": "Go",
+      "privacy_policy": "Privacy Policy"
+    }
+  },
   "pages": {
     "index": {
       "articles": "Articles"

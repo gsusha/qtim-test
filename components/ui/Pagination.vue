@@ -104,7 +104,14 @@ const handleNextPageClick = () => {
     &:hover {
       background: colors.$light;
 
-      &-next {
+      &.pagination__item-page {
+        &--active {
+          background: colors.$dark;
+          color: colors.$white;
+        }
+      }
+
+      &.pagination__item-next {
         border-color: colors.$light;
       }
     }
