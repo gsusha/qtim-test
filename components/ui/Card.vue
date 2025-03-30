@@ -36,6 +36,7 @@ const handleImageError = () => {
   display: block;
   cursor: pointer;
   color: colors.$dark;
+  will-change: transform;
   transition: transform 0.3s ease-in-out;
 
   &__image {
@@ -89,8 +90,10 @@ const handleImageError = () => {
     opacity: 0;
 
     left: 50%;
+    will-change: transform, opacity;
+
     transform: translateY(10px);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Плавный переход для кнопки */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
     .card:hover & {
       opacity: 1;

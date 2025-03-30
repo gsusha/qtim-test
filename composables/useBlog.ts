@@ -1,7 +1,7 @@
 import type { BlogPost } from '~/types/blog';
 
 export function useBlog() {
-  const isLoading = ref<boolean>(false);
+  const isLoading = ref<boolean>(true);
   const error = ref<string | null>(null);
 
   const posts = ref<BlogPost[]>([]);
@@ -16,7 +16,6 @@ export function useBlog() {
   const apiUrl = useRuntimeConfig().public.apiUrl;
 
   const fetchPosts = async () => {
-    isLoading.value = true;
     error.value = null;
 
     try {

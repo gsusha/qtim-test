@@ -15,7 +15,11 @@
         </div>
       </div>
     </div>
-    <div v-else class="blog-page__loading">{{ t('common.loading') }}</div>
+    <div v-else class="blog-page__skeleton">
+      <UiSkeleton width="100%" height="96px" />
+      <UiSkeleton width="100%" height="700px" />
+      <UiSkeleton width="695px" height="500px" />
+    </div>
   </div>
 </template>
 
@@ -93,6 +97,12 @@ onMounted(async () => {
       font-size: 36px;
       line-height: 124%;
     }
+  }
+
+  &__skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
   }
 }
 </style>
