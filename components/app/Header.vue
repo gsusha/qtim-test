@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header container-large">
     <LogoQTM class="header__logo"  />
     <div class="header__navigation">
       <nav class="header__menu">
@@ -46,7 +46,7 @@ const { t } = useI18n();
   &__navigation {
     display: flex;
     align-items: center;
-    gap: 70px;
+    gap: 90px;
   }
 
   &__menu {
@@ -57,6 +57,7 @@ const { t } = useI18n();
     }
 
     &-item {
+      cursor: pointer;
       font-size: 20px;
     }
   }

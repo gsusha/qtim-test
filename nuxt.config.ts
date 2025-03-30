@@ -1,6 +1,8 @@
 export default defineNuxtConfig({
   runtimeConfig: {
-    appEnv: process.env.APP_ENV,
+    public: {
+      apiUrl: process.env.NUXT_PUBLIC_API_URL,
+    },
   },
 
   typescript: {

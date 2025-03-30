@@ -6,7 +6,13 @@
     },
     "button": "Let’s work"
   },
-  "blog_card": {
+  "pages": {
+    "index": {
+      "articles": "Articles"
+    }
+  },
+  "card": {
+    "no_photo": "No Photo",
     "more": "Read More"
   }
 }
