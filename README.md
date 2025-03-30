@@ -1,75 +1,85 @@
-# Nuxt Minimal Starter
+# QTIM Тестовое задание - Фронт
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 📌 Описание
+Данный проект представляет собой шаблон блога, созданный с использованием **Nuxt 3** и **TypeScript**.
 
-## Setup
+### 🎯 Цель задания:
+- Реализовать верстку шаблона блога согласно макету.
+- Настроить взаимодействие с API.
+- Разработать модуль блога:
+    - Вывод списка статей блога.
+    - Реализация пагинации на фронтовой части.
+    - Переход на детальную страницу статьи.
 
-Make sure to install dependencies:
+---
 
-```bash
-# npm
+## 🚀 Запуск проекта
+
+### 1️⃣ Установите зависимости
+```sh
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+### 2️⃣ Создайте файл `.env`
 
-Start the development server on `http://localhost:3000`:
+Создайте в корне проекта файл `.env` на основе примера `.env.example` и укажите URL API:
 
-```bash
-# npm
+```sh
+VITE_API_URL=https://6082e3545dbd2c001757abf5.mockapi.io/qtim-test-work
+```
+
+### 3️⃣ Запустите проект в режиме разработки
+```sh
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Проект будет доступен по адресу: **`http://localhost:3000`**
 
-Build the application for production:
+---
 
-```bash
-# npm
-npm run build
+## 🔗 Полезные ссылки
 
-# pnpm
-pnpm build
+- **API Mockup:**
+    - [Список постов](https://6082e3545dbd2c001757abf5.mockapi.io/qtim-test-work/posts/)
+    - [Детальная страница поста](https://6082e3545dbd2c001757abf5.mockapi.io/qtim-test-work/posts/{id})
 
-# yarn
-yarn build
+- **Макет в Figma:**  
+  [📌 Figma Test](https://www.figma.com/file/YuLYXnZmLk1U5sKAYjQ0Qy/Test?type=design&node-id=0-1&mode=design&t=qUknJKzxfWOznHn0-0)
 
-# bun
-bun run build
+---
+
+## 📂 Структура проекта
+
+```
+📂 src
+ ├── 📁 assets        # Стили и изображения
+ ├── 📁 components    # UI-компоненты
+ ├── 📁 composables   # Логика (useBlog)
+ ├── 📁 i18n          # Локали (en.json для примера)
+ ├── 📁 pages         # Основные страницы проекта
+ ├── 📁 types         # Типы TypeScript
 ```
 
-Locally preview production build:
+---
 
-```bash
-# npm
-npm run preview
+## 🔧 Основной стек
+- **Vue 3 (Composition API)**
+- **Nuxt 3**
+- **TypeScript**
+- **SCSS**
+- **Fetch API**
 
-# pnpm
-pnpm preview
+---
 
-# yarn
-yarn preview
+## 📌 Функционал
+✅ Вывод списка статей блога.  
+✅ Фронтовая пагинация.  
+✅ Детальная страница поста.  
+✅ Обработка ошибок API.  
+✅ Skeleton Loader для загрузки контента.
 
-# bun
-bun run preview
-```
+---
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+🔥 **Проект готов к использованию!** Если есть вопросы — смело задавайте. 🚀
+
+[Я в телеграме](https://t.me/gsusha)
