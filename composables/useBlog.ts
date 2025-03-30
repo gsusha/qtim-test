@@ -68,7 +68,7 @@ export function useBlog() {
   };
 
   const setNextPage = () => {
-    if (currentPage.value * postsPerPage < totalPosts.value) {
+    if (currentPage.value < totalPages.value) {
       currentPage.value += 1;
       updateDisplayedPosts();
     }
