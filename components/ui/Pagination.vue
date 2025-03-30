@@ -72,6 +72,8 @@ const handleNextPageClick = () => {
 
     position: relative;
 
+    transition: background-color .1s ease-in-out;
+
     &-content {
       position: absolute;
       top: 50%;
@@ -90,9 +92,20 @@ const handleNextPageClick = () => {
     }
 
     &-next {
+      background: colors.$white;
+      border: 1px solid colors.$lightest;
+
       &--disabled {
         pointer-events: none;
         opacity: 0.5;
+      }
+    }
+
+    &:hover {
+      background: colors.$light;
+
+      &-next {
+        border-color: colors.$light;
       }
     }
   }
