@@ -2,26 +2,28 @@
   <div class="index-page">
     <UiTitle class="index-page__title">{{ t('pages.index.articles') }}</UiTitle>
     <div v-if="isLoading" class="index-page__loading">Загрузка</div>
-    <CardList v-else :posts />
+
+    <CardList
+      v-else
+      class="index-page__card-list"
+      :posts="displayedPosts"
+    />
+    <Pagination
+      class="index-page__pagination"
+      :total-pages="totalPages"
+      :currentPage="currentPage"
+      @setPageNumber="setPageNumber"
+      @setNextPage="setNextPage"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { useBlog } from '~/composables/useBlog';
-import type { BlogPost } from '~/types/blog';
+import Pagination from '~/components/ui/Pagination.vue';
 
 const { t } = useI18n();
-const { fetchPosts, isLoading } = useBlog();
-
-const posts = ref<BlogPost[]>([]);
-
-onMounted(async () => {
-  try {
-    posts.value = await fetchPosts()
-  } catch (err) {
-    console.error(err)
-  }
-})
+const { displayedPosts, isLoading, totalPages, currentPage, setNextPage, setPageNumber } = useBlog();
 </script>
 
 <style lang="scss" scoped>
@@ -30,6 +32,10 @@ onMounted(async () => {
 
   &__title {
     margin-bottom: 60px;
+  }
+
+  &__card-list {
+    margin-bottom: 50px;
   }
 }
 </style>
