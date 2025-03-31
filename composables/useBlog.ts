@@ -1,6 +1,8 @@
 import type { BlogPost } from '~/types/blog';
 
 export function useBlog() {
+  // на практике я бы разделила useBlog на useBlog, useApi, usePagination,
+  // чтобы соблюсти принцип единой ответственности
   const isLoading = ref<boolean>(true);
   const error = ref<string | null>(null);
 
